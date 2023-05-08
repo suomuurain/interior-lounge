@@ -1,0 +1,353 @@
+body {
+  margin: 0 auto;
+  font-family: "Montserrat", "Tahoma", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000000;
+  min-width: 1150px;
+}
+
+.wrapper {
+  width: 1110px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* стилизация хедера */
+
+.page-header {
+  background-color: #ffffff;
+  padding: 0;
+  border-bottom: 2px solid #F5D581;}
+
+.page-header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-primary-container .menu-item {
+  list-style: none;
+}
+
+.menu-primary-container .menu-item a {
+  font-size: 18px;
+  color: #000000;
+  padding: 24px 25px;
+  text-decoration: none;
+}
+
+.menu-primary-container .menu-item a:hover {
+  color: #9f7303;
+}
+
+.menu-primary-container .menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Отступы для пунктов меню первого уровня */
+
+.menu-primary-container .menu > .menu-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-primary-container .sub-menu {
+  position: absolute;
+  min-width: 200px;
+  top: 30px;
+  left: 20px;
+  display: none;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(97, 97, 97, 0.18), 0 4px 8px rgba(97, 97, 97, 0.18);
+  z-index: 2;
+}
+
+.menu-primary-container .menu-item-has-children > a {
+  padding-right: 30px;
+}
+
+.menu-primary-container .menu-item-has-children {
+  position: relative;
+}
+
+.menu-primary-container .menu-item-has-children::before {
+  content: " ";
+  background-image: url("img/arrow.svg");
+  width: 13px;
+  height: 9px;
+  background-size: cover;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+}
+
+.menu-primary-container .sub-menu .menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-primary-container .sub-menu .menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.menu-primary-container .menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+/* кастомный класс */
+.menu-primary-container .menu-item-styled {
+  border: 1px solid #9f7303;
+  border-radius: 8px;
+  color: #000000;
+}
+
+.menu-primary-container .menu-item-styled:hover {
+  background: #FFFDF8;
+}
+
+.menu-primary-container .menu-item-styled:active {
+  background: #FFF7E3;
+}
+
+.menu-primary-container .menu-item-styled a:hover,
+.menu-primary-container .menu-item-styled a:active {
+  color: #000000;
+}
+
+.menu-primary-container .current-menu-item a {
+  color: #684C05;
+}
+
+/* стилизация секций */
+
+.page-body {
+  background-color: #fffdf8;
+  padding: 0;
+}
+
+.main-area{
+  margin-bottom: 115px;
+}
+
+/* выносится в визивиг редактор */
+/* fonts */
+.wysiwyg-wrapper h1 {
+  font-size: 48px;
+  line-height: 59px;
+  margin-bottom: 24px;
+}
+
+.wysiwyg-wrapper h2 {
+  color: #9f7303;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.wysiwyg-wrapper h3 {
+  color: #9f7303;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.wysiwyg-wrapper ul,
+.wysiwyg-wrapper ol {
+  margin-bottom: 50px;
+  padding-left: 22px;
+}
+
+.wysiwyg-wrapper li {
+  margin-bottom: 16px;
+  position: relative;
+  list-style: none;
+}
+
+.wysiwyg-wrapper li::after {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #f5d581;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 9px;
+  left: -20px;
+}
+
+.wysiwyg-wrapper blockquote {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  color: #9f7303;
+  padding: 40px 100px;
+  border-top: 1px solid #f5d581;
+  border-bottom: 1px solid #f5d581;
+  text-align: center;
+  width: 70%;
+  margin: 60px auto 60px auto;
+}
+
+.wysiwyg-wrapper .wrapper-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wysiwyg-wrapper img {
+  display: block;
+}
+
+/* кастомные классы для локального разделения на колонки, в cms используется wysiwig*/
+.main-area__column-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-area__column-item {
+  width: 540px;
+}
+
+/* стилизация поля отзыва */
+.order {
+  background-color: #f4efe2;
+  padding: 70px 0 56px;
+}
+
+.order-form {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #f5d581;
+}
+
+.order-title {
+  color: #9f7303;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.wpcf7-textarea {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Montserrat", "Arial", sans-serif;
+  width: 100%;
+  height: 160px;
+  padding: 17px;
+  box-sizing: border-box;
+  border: 1px solid #f5d581;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.wpcf7-textarea:focus {
+  outline: 1px solid #9F7303;
+  box-shadow: inset 0px 4px 4px rgba(245, 213, 129, 0.25);
+}
+
+.wpcf7-text {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "Montserrat", "Arial", sans-serif;
+  height: 64px;
+  padding: 17px;
+  box-sizing: border-box;
+  border: 1px solid #f5d581;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.order-form .wpcf7-text {
+  width: 50%;
+}
+
+.order-form .wpcf7-text:focus {
+  outline: 1px solid #9F7303;
+  box-shadow: inset 0px 4px 4px rgba(245, 213, 129, 0.25);
+}
+
+/* стили для кнопки отправки */
+.wpcf7-submit {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #9f7303;
+  color: #ffffff;
+  width: 285px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.wpcf7-submit:hover {
+  background: #856103;
+}
+
+.wpcf7-submit:focus {
+  background: #684C05;
+}
+
+
+/* стили для подписи */
+.order-text {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #494844;
+  width: 185px;
+  margin-left: 20px;
+}
+
+/* ставим кнопку и подпись рядом */
+.order-submit-area {
+  display: flex;
+  align-items: center;
+}
+
+/* стилизация отзывов */
+.reviews {
+  background-color: #f4efe2;
+  padding: 0 0 88px 0;
+}
+
+.review-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: 27px 1fr;
+  column-gap: 22px;
+  margin-bottom: 30px;
+}
+
+.review-image-wrapper {
+  width: 50px;
+  height: 50px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-color: #f5d581;
+  border-radius: 50%;
+}
+
+.review-item img {
+  border-radius: 50%;
+  object-fit: cover;
+  text-indent: -100vw;
+}
+
+.review-name {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+}
+
+.review-text {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin: 0;
+}
